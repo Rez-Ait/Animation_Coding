@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 187166895}
   - component: {fileID: 187166894}
   - component: {fileID: 187166893}
+  - component: {fileID: 187166897}
   m_Layer: 5
   m_Name: Btn
   m_TagString: Untagged
@@ -174,12 +175,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc83524068da6864bb4aafb84beb7f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lsBtnAction:
-  - actionType: 2
-    speed: 1
-    timeAnimation: 0.3
+  delayStart: 3
+  btnAction:
+  - actionType: 1
+    timeAnimation: 0.5
     isBackStep: 1
-  isRepit: 1
+    endState: {x: 0, y: 100, z: 0}
+  - actionType: 0
+    timeAnimation: 1
+    isBackStep: 0
+    endState: {x: 0, y: 0, z: 0}
+  isAutoStart: 1
+  isRepet: 0
 --- !u!114 &187166894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +269,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187166891}
   m_CullTransparentMesh: 1
+--- !u!114 &187166897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187166891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc83524068da6864bb4aafb84beb7f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayStart: 3
+  btnAction:
+  - actionType: 3
+    timeAnimation: 0.5
+    isBackStep: 1
+    endState: {x: 0.3, y: 0.3, z: 0}
+  - actionType: 0
+    timeAnimation: 1
+    isBackStep: 0
+    endState: {x: 0, y: 0, z: 0}
+  isAutoStart: 1
+  isRepet: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
